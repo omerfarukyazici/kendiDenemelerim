@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "509648492110",
+    "project_id": "refikaref-refikaref",
+    "storage_bucket": "refikaref-refikaref.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509648492110:android:b4a09c6676b6df05bcd51f",
+        "android_client_info": {
+          "package_name": "com.example.refikaref"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509648492110-vlun9cvla8l5k3laeqo358j86smrmnpv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.refikaref",
+            "certificate_hash": "d42ef901ffc1a3724142e2c7f0192462e137d735"
+          }
+        },
+        {
+          "client_id": "509648492110-9lcfso521c5pk7jqgop2s9093q8sq0bm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFtIXdEYV0cEMVVW_ydLqc7yfRjWmoxgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509648492110-9lcfso521c5pk7jqgop2s9093q8sq0bm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
