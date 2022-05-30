@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:refikaref/chat_screen.dart';
-import 'package:refikaref/login.dart';
+import 'package:refikaref/Screens/chat_screen.dart';
+import 'package:refikaref/auth_and_realtime_database/login.dart';
 
 class Service {
   //nu seribsle aut işlerini yapacağz
   final auth = FirebaseAuth.instance;
+
+
+
 
 // kullanıcı yaratma fonks
 
@@ -13,12 +16,13 @@ class Service {
     try {
       await auth
           .createUserWithEmailAndPassword(email: email, password: password)
-          .then((value) => {
+          .then((userCredential) => {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => ChatScreen(),
-                    ))
+                    )
+                )
               });
     } catch (e) {
       errorBox(context, e);
@@ -28,7 +32,8 @@ class Service {
 //oturum açma fonks
   void loginUser(context, email, password) async {
     try {
-      await auth.signInWithEmailAndPassword(email: email, password: password).then((value) => {
+      await auth.signInWithEmailAndPassword
+        (email: email, password: password).then((userCredential) => {
         Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen()))
       });
     } catch (e) {
@@ -40,7 +45,7 @@ class Service {
   void signOut(context) async {
     try {
 
-      await auth.signOut().then((value) =>{
+      await auth.signOut().then((userCredential) =>{
         Navigator.push(context,
             MaterialPageRoute(builder:
             (context) => LoginPage()),

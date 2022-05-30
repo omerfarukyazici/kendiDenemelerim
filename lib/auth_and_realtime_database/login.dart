@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:refikaref/firebase_helper.dart';
-import 'package:refikaref/register.dart';
+import 'package:refikaref/auth_and_realtime_database/firebase_helper.dart';
+import 'package:refikaref/auth_and_realtime_database/register.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatelessWidget {

@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:refikaref/chat_screen.dart';
-import 'package:refikaref/login.dart';
+import 'package:refikaref/Screens/home_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'auth_and_realtime_database/login.dart';
 
 main() async {
   //burada kullancı emaili gncel mi diye kontol edeceğiz
@@ -19,6 +20,6 @@ main() async {
     debugShowCheckedModeBanner: false,
 
     //eğer email girilyse sohbete değilse girişe yollucak
-    home: email == null? LoginPage(): ChatScreen() ,
+    home: email == null? LoginPage(): const HomePage() ,
   ));
 }

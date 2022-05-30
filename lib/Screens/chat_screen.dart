@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:refikaref/firebase_helper.dart';
+import 'package:refikaref/auth_and_realtime_database/firebase_helper.dart';
+import 'package:refikaref/Screens/home_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 var loginUser = FirebaseAuth.instance.currentUser;
@@ -37,8 +38,14 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         automaticallyImplyLeading: false,
-        actions: [
+        actions: [IconButton(
+            onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),)
+          );
+        }, icon: Icon(Icons.keyboard_backspace_outlined)),
+          SizedBox(width: 315),
           IconButton(
               onPressed: () async {
                 service.signOut(context);
